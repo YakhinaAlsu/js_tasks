@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+
     <!-- Task 8 Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит в консоль то, что пользователь ввел в input. 
     Task 9. Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу, что пользователь ввел в input. Добавьте очистку input после нажатия кнопки.
     Task 10. Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу число, которое ввел пользователь умноженное на 10.
@@ -23,6 +24,8 @@
     });
     </script>
     -->
+
+
     <!-- Task 11. Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу число, которое ввел пользователь и к нему добавленное число 10 
     <input type="text" id='one'>
     <button id='btn'>Add</button>
@@ -37,6 +40,8 @@
         one.value='';
     })
     </script> -->
+
+
     <!--Task 12. Создайте два input и кнопку. В первый input пользователь вводит имя, во второе фамилию. При нажатии кнопки выполняется функция, которая выводит в консоль строку 'Hello имя фамилия', где имя - имя пользователя и фамилия - введенная фамилия
     
     <input type="text" id='one'>
@@ -51,6 +56,73 @@
         console.log(`Hello ${one.value} ${two.value}`)
     })
     </script>-->
+
+    <!--Task 13. Создайте два input и кнопку. В input пользователь вводит числа. При нажатии кнопки выполняется функция, которая выводит сумму данных двух чисел на страницу. 
+    <input type="text" id='one'>
+    <input type="text" id='two'>
+    <button id='btn'>Add</button>
+    <script>
+        let one = document.querySelector('#one');
+        let btn = document.querySelector('#btn');
+        let two = document.querySelector('#two');
+        
+        btn.addEventListener('click', function() {
+            console.log(+one.value + + two.value)
+        })
+        </script-->
+
+        <!-- Task 14. Создайте input и пропишите ему в html value = 77. С помощью JS измените value на 'Hello'
+        <input type="text" value='77' id='one'>
+        <script>
+        document.querySelector('#one').value='Hello';
+        </script> -->
+
+        <!-- Task 15. Создайте input и получите его в переменную y. В js выполните следующее присвоение: y.style.border = '2px solid red' . Изучите результат операции.
+        <input type="text" id='one'>
+        <script>
+            let y = document.querySelector('#one').style.border = '2px solid red';
+        </script>
+        -->
+        <!-- Task 16. Создайте два input type=number, куда пользователь может ввести числа. Выведите на страницу сумму данных чисел
+        <input type="number" id='one'>
+        <input type="number" id='two'> 
+        <button id='btn'>+</button>
+        <div class='out'></div>
+        <script>
+            let one = document.querySelector('#one');
+            let two = document.querySelector('#two');
+            let btn = document.querySelector('#btn');
+            let out = document.querySelector('.out');
+            btn.addEventListener('click', function() {
+                out.innerHTML= +one.value + + two.value;
+            })
+        </script> -->
+        <!-- Task 17. Создайте input type="text" куда пользователь может ввести строку и число. Создайте функцию, которая запускается по нажатию на кнопку. 
+            Получите значение из input в переменную t. А затем сделайте операцию t = parseInt(t), и результат операции выведите в консоль. Прочитайте за эту операцию. 
+            Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод
+            <input type="text" id='one'>
+            <button id='btn'>add</button>
+            <script>
+              let one = document.querySelector('#one');
+              let btn = document.querySelector('#btn');
+              btn.addEventListener('click', function() {
+                 let t = one.value;
+                 console.log(parseInt("t"))
+              })
+            </script>-->
+
+            
+            <!--Task 18. Создайте input type="text" куда пользователь может ввести строку и число. Создайте функцию, которая запускается по нажатию на кнопку.
+            Получите значение из input в переменную t. А затем сделайте операцию t = parseFloat(t), и результат операции выведите в консоль.
+            Прочитайте за эту операцию. Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод.-->
+            
+            <!--Task 19. Создайте два input type=number, куда пользователь может ввести отрицательные числа. Выведите на страницу сумму данных чисел. Мы это делали! 
+            Зачем? Затем, что нужно понимать как влияет перевод в число с помощью + и parseInt на отрицательные числа!!!-->
+            
+            <!--Task 20. Создайте опросник, куда пользователь может ввести имя, фамилию, возраст, род занятий. И кнопку. 
+            По нажатию кнопки выведите на страницу предложение 'Уважаемый Иван, Иванов, ваш возраст 33 года, по професси вы ...' куда поставьте соответствующие данные из inputов.-->
+
+
 
 
 
