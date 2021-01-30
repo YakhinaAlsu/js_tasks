@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-     <!-- Task 1/ Дан массив a1 = [4, 5, 6, 7, 12, 34, 56, 78, 90, 11] -
+    <!-- Task 1/ Дан массив a1 = [4, 5, 6, 7, 12, 34, 56, 78, 90, 11] -
  с помощью map переберите массив и создайте новый массив a1_res куда добавьте элементы данного массива умноженные на 2.
   Возвратите массив a1_res. 
   <script>
@@ -17,7 +19,7 @@
       console.log(b) 
   </script>-->
 
-   <!--Task 2. Дан массив a2 = [2,3,4,5,10,11,12] - с помощью map переберите массив 
+    <!--Task 2. Дан массив a2 = [2,3,4,5,10,11,12] - с помощью map переберите массив 
     и создайте массив a2_res куда добавьте элементы данного массива возведенные во вторую степень. 
     Возвратите массив a2_res. Действия должны запускаться при вызове функции t2.
     <script>
@@ -43,19 +45,126 @@
     <!--!!!!!!!!Task 4. Следующая задача проще будет решаться через метод forEach, который мы изучим во второй части урока! 
     Сейчас мы делаем костыль, для отработки навыков работы с map. 
     Дан массив a4 = [4,"3",6,7,"12",34,"56",78,90,11] - с помощью map переберите массив и создайте массив a4_res куда добавьте ТОЛЬКО числа из массива a4. 
-    Возвратите a4_res. Действия должны запускаться при вызове функции t4.-->
-   <!-- <script>
+    Возвратите a4_res. Действия должны запускаться при вызове функции t4.
+    <script>
         function addNew () {
-        let b;
+            let b;
         let a = [4,"3",6,7,"12",34,"56",78,90,11];
-        return b = a.map(function New(item) {
-            if (b.item = Number) {
-                return b
-            } else {
-
-            }
-        })}
+        return a.filter(function New(item) {
+            if(typeof item == 'number') {
+              return true;
+           }
+        })
+    }
        console.log( addNew() );
     </script> -->
+    <!-- Task 5. Дан массив b1 = [3, 14, 15, 92]. C помощью filter переберите массив и создайте b1_res, который содержит только четные числа из b1. 
+         Возвратите b1_res. Действия должны запускаться при вызове функции t5.
+         <script>
+          function addNew () {
+            let b;
+        let a = [3, 14, 15, 92];
+        return b= a.filter(function New(item) {
+            if(item % 2 == 0) {
+              return true;
+           }
+        })
+    }
+    console.log( addNew() );
+         </script>-->
+    <!--Task 6. Дан массив b6 = [3, 14, 15, 92, "6", "5", "hello", 32]. 
+        C помощью filter переберите массив b6 и создайте массив b6_res, который содержит только числа из b6. Возвратите b6_res.
+         Действия должны запускаться при вызове функции t6.
+         <script>
+          function addNew () {
+            let b;
+        let a = [3, 14, 15, 92, "6", "5", "hello", 32];
+        return a.filter(function New(item) {
+            if(typeof item == 'number') {
+              return true;
+           }
+        })
+    }
+       console.log( addNew() );
+         </script>-->
+
+    <!--Task 7. Дан массив b7 = ["php-7", "html", "css", 92, "6", "5", "hello", 32].
+    C помощью filter переберите массив b7 и создайте b7_res, который содержит только строки из b7, длина которых больше
+    3. Возвратите b7_res.
+    Действия должны запускаться при вызове функции t7.
+    <script>
+        function addNew() {
+            let b;
+            let a = ["php-7", "html", "css", 92, "6", "5", "hello", 32];
+            return b = a.filter(function New(item) {
+                if (typeof item == 'string' && item.length>3) {
+                    return true;
+                }
+            })
+        }
+        console.log(addNew());
+    </script>-->
+
+    <!-- Task 8
+    Дан массив b8 = [3, 14, 15, 92, "6", "5", "hello", 32]. С помощью filter, переберите массив b8 и создайте массив
+    b8_res, который содержит индексы четных элементов.
+    Возвратите b8_res.
+    Действия должны запускаться при вызове функции t8
+    <script>
+     function addNew () {
+        let b;
+        let a = [3, 14, 15, 92, "6", "5", "hello", 32];
+        return b=a.filter(function New(item, index) {
+            if(item % 2 == 0) {
+              return console.log(index)
+           }
+        })
+    }
+    console.log(addNew())
+    </script>-->
+    <!--Task 9. Дан массив b9 = [3, "hello", 4, "world", 5, "hi"].
+    С помощью filter, переберите массив b9 и создайте массив b9_num и b9_string, которые содержат первый - числа из b9,
+    второй - строки.
+    Задачу решите с помощью filter. Действия должны запускаться при вызове функции t9.
+    <script>
+        let b9 = [3, "hello", 4, "world", 5, "hi"];
+
+    function t9() {
+    b9_num = b9.filter((_, index) =>{
+        return index % 2 !== 0;
+    })
+    b9_string = b9.filter((_, index)=>{
+        return index % 2 == 0;
+    })
+
+    return [b9_num, b9_string];
+    }
+    console.log(t9());
+    </script>-->
+
+    <!--Task 10. Дан массив b10 = [ [1,2,3], [3,4,6], [4,5,7], [8,9,3]].
+    С помощью filter переберите массив и создайте b10_res, в который входят вложенные массивы содержащие цифру 3.
+    Возвратите b10_res. Действия должны запускаться при вызове функции t10.
+    <script>
+        let b = [
+            [1, 2, 3],
+            [3, 4, 6],
+            [4, 5, 7],
+            [8, 9, 3]
+        ]
+        let a;
+
+        function New() {
+            return a = b.filter(index => {
+                for (let item of index) {
+                    if (item === 3) return index;
+                }
+            })
+
+        }
+        console.log(New())
+    </script>-->
+
 </body>
+
 </html>
